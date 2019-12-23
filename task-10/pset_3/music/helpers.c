@@ -1,71 +1,91 @@
 // Helper functions for music
-#include "helpers.h"
-#include <stdio.h>
+#include <cs50.h>
 #include <math.h>
-
 #include <string.h>
+#include <stdlib.h>
+#include "helpers.h"
 // Converts a fraction formatted as X/Y to eighths
 int duration(string fraction)
 {
-   int x= fraction[2]-'0';
-   int y = 8/x;
-   int z = fraction[0]-'0';
-   return(z*y);
+    //Convert numerator and denominator to integer
+    int numerator = fraction[0] - '0';
+    int denominator = fraction[2] - '0';
+    //Convert the numerator to number of eighths
+    return (8 / denominator) * numerator;
 }
-
 // Calculates frequency (in Hz) of a note
 int frequency(string note)
 {
-    int n;
-    int m;
-    int l;
-    float f;
-    char note1 = note[0];
-    char note2 = note[1];
-    l= note[strlen(note)-1]-'0';
-
-    if (note[0]=='A'){
-        n=0;
-    }
-    else if (note[0]=='B'){
-        n=2;
-    }
-    else if (note[0]=='C'){
-        n=9;
-    }
-    else if (note[0]=='D'){
-        n=7;
-    }
-    else if (note[0]=='E'){
-        n=5;
-    }
-    else if (note[0]=='F'){
-        n=4;
-    }
-    else if (note[0]=='G'){
-        n=2;
-    }
-    if (note[1]=='#'){
-        n=n+1;
-    }
-    else if(note[1]=='b'){
-        n=n-1;
-    }
-    f = 440.0*(pow(2.0,n/12.0));
-    m=l-4;
-    if (l > 4)
+    //Get octave from last char in note string
+    int octave = note[strlen(note) - 1] - '0';
+    // Determine Frequency of note in the given octive
+    double freq = 0.0;
+    // Determine note letter
+    if (note[0] == 'A')
     {
-        f *= pow(2.0, l - 4);
+        freq = 440;
     }
-    else if (l < 4)
+    else if (note[0] == 'B')
     {
-        f /= pow(2.0, 4 - l);
+        freq = 440.0 * (pow(2.0, (2.0 / 12.0)));
     }
-    return round(f);
+    else if (note[0] == 'C')
+    {
+        freq = 440.0 / (pow(2.0, (9.0 / 12.0)));
+    }
+    else if (note[0] == 'D')
+    {
+        freq = 440.0 / (pow(2.0, (7.0 / 12.0)));
+    }
+    else if (note[0] == 'E')
+    {
+        freq = 440.0 / (pow(2.0, (5.0 / 12.0)));
+    }
+    else if (note[0] == 'F')
+    {
+        freq = 440.0 / (pow(2.0, (4.0 / 12.0)));
+    }
+    else if (note[0] == 'G')
+    {
+        freq = 440.0 / (pow(2.0, (2.0 / 12.0)));
+    }
+    // Loop to shift octave
+    if (octave > 4)
+    {
+        for (int i = 0; i < octave - 4; i++)
+        {
+            freq *= 2.0;
+        }
+    }
+    else if (octave < 4)
+    {
+        for (int i = 0; i < 4 - octave; i++)
+        {
+            freq /= 2.0;
+        }
+    }
+    // Final adjustment or flat or sharp
+    if (note[1] == 'b')
+    {
+        freq /= (pow(2.0, (1.0 / 12.0)));
+    }
+    else if (note[1] == '#')
+    {
+        freq *= (pow(2.0, (1.0 / 12.0)));
+    }
+    // Return frequency value as an int
+    int result = round(freq);
+    return result;
 }
-
 // Determines whether a string represents a rest
 bool is_rest(string s)
 {
-    return strlen(s) == 0;
+    if (s[0] == '\0')
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
