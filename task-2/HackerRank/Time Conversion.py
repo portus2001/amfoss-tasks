@@ -19,7 +19,7 @@ def timeConversion(s):
             for i in range (2,8):
                lst.append(str(s[i]))
         else:
-            hh = hh + 12;
+            hh = hh + 12
             lst.append(str(hh))
             for i in range(2,8):
                 lst.append(str(s[i]))

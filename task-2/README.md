@@ -10,7 +10,7 @@ There are two subfolders in which one contains problems from codeforces and othe
 
 CODEFORCES          |  LINK
 --------------------|-----------------------------------------------
-Theatre Square    | http://codeforces.com/problemset/problem/1/A
+Theatre Square      | http://codeforces.com/problemset/problem/1/A
 Way Too Long Words  | http://codeforces.com/problemset/problem/71/A
 Next Round          | http://codeforces.com/problemset/problem/158/A
 Bit++               | http://codeforces.com/problemset/problem/282/A
