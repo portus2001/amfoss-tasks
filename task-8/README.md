@@ -4,7 +4,7 @@
 
 ## About
 
-The task was to create our own personal portfolio and blog.
+The task was to create our personal portfolio and blog.
 
 ## How I Did
 
