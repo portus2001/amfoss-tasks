@@ -51,13 +51,13 @@ Here t1 is the sum of even numbers just before the number n and t2 is the sum of
 
 #### Find the largest palindrome made from the product of two 3-digit numbers which is less than N
 
-* A for loop interates from 100 to 1000.
+* A for loop iterates from 100 to 1000.
 
 * Inside the loop, there is another loop which iterates from 100 to 1000,
 
-* The two loops are used to check whether multiplying the loop variables gets us a pallindrome.If it does,then it is appended to a list.
+* The two loops are used to check whether multiplying the loop variables gets us a palindrome. If it does, then it is appended to a list.
 
-* Then in another two nested for loops, we will check whether each element in the list is less than an inputted value by sorting the list and taking each element from the end of loop. If it is less then we will print that element exit out of the loop.
+* Then in another two nested for loops, we will check whether each element in the list is less than an inputted value by sorting the list and taking each element from the end of the loop. If it is less then we will print that element exit out of the loop.
 
 ### Problem-5
 
@@ -65,7 +65,7 @@ Here t1 is the sum of even numbers just before the number n and t2 is the sum of
 
 * Working of reduce function:
 
-  * At first step, first two elements of sequence are picked and the result is obtained.
-  * Next step is to apply the same function to the previously attained result and the number just succeeding the second element and the result is again stored.
+  * At first step, the first two elements of the sequence are picked and the result is obtained.
+  * The next step is to apply the same function to the previously attained result and the number just succeeding the second element and the result is again stored.
   * This process continues till no more elements are left in the container.
-  * The final returned result is returned and printed on console.
+  * The final returned result is returned and printed on the console.

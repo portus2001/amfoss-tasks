@@ -4,7 +4,8 @@
 
 ## About
 
-Given a keyword example, ”Linux”, you need to get the top 10 Google search results for the given particular word. You can use Ruby for doing this task. Ruby has a gem (library), nokogiri which is an HTML, CSS and XML parser. **https://github.com/sparklemotion/nokogiri**
+Given a keyword example, ”Linux”, you need to get the top 10 Google search results for the given particular word. You can use Ruby for doing this task. Ruby has a gem (library), nokogiri which is an HTML, CSS and XML parser. 
+Here is the **[link](https://github.com/sparklemotion/nokogiri)**.
 
 ## Blockers
 

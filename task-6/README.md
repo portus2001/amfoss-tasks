@@ -21,6 +21,6 @@ Resources:
 
 * In order to run the program we have to enter the following command into the terminal
 '''
-run twittercli.go
+**run twittercli.go**
 '''
 
