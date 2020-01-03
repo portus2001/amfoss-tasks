@@ -2,13 +2,13 @@
 
 ## About
 
-Implement a program that encrypts messages using Caesar’s cipher, per the below.
+Implement a program that encrypts messages using Caesar’s cipher, as per below.
 
-'''
+```c
 $ ./caesar 13
 plaintext:  HELLO
 ciphertext: URYYB
-'''
+```
 
 ## How I Did
 
@@ -22,6 +22,6 @@ ciphertext: URYYB
 
 * Loops over the plaintext and output ciphertext by using the below method:
 
-'''
+```c
 **cyphertext[i] = (plaintext[i] - ('a'or 'A') + k) % 26 + ('a'or 'A'))**
-'''
+```

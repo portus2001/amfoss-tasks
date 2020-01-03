@@ -2,7 +2,7 @@
 
 ## About
 
-Implement a program that encrypts messages using Vigenère’s cipher, per the below.
+Implement a program that encrypts messages using Vigenère’s cipher, as per below.
 
 '''
 $ ./vigenere ABC
@@ -21,6 +21,6 @@ ciphertext: HFNLP
 
 * Loops over the plaintext and output ciphertext by using the below method:
 
-'''
+```c
 **cyphertext[i] = (plaintext[i] - ('a'or 'A') + k) % 26 + ('a'or 'A'))**
-'''
+```

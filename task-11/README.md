@@ -5,8 +5,8 @@
 ## About
 
 To create a clone of Pong using Javascript (minimal GUI is enough).
-    * It should be multiplayer.
-    * It can be offline.
+ *  It should be multiplayer.
+ *  It can be offline.
 
 ## My work
 

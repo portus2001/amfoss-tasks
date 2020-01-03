@@ -19,8 +19,8 @@ Resources:
 
 ## How To Run The Program
 
-* In order to run the program we have to enter the following command into the terminal
-'''
-**run twittercli.go**
-'''
+* In order to run the program we have to enter the following command into the terminal:
 
+```go
+run twittercli.go
+```

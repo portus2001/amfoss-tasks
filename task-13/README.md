@@ -20,9 +20,9 @@
 
 * The formula given below will give the sum of multiples of any number m:
 
-'''
+```py
 **(m * n * (n + 1) // 2)** gives the sum of multiples of m
-'''
+```
 
 ### Problem-2
 
@@ -32,9 +32,10 @@
 
 * The value of f gives us the sum of the even numbers in the Fibonacci series:
 
-'''
+```py
 **f = 4 * t1 + t2**
-'''
+```
+
 Here t1 is the sum of even numbers just before the number n and t2 is the sum of even numbers just before t1.
 
 ### Problem-3
@@ -53,7 +54,7 @@ Here t1 is the sum of even numbers just before the number n and t2 is the sum of
 
 * A for loop iterates from 100 to 1000.
 
-* Inside the loop, there is another loop which iterates from 100 to 1000,
+* Inside the loop, there is another loop which iterates from 100 to 1000.
 
 * The two loops are used to check whether multiplying the loop variables gets us a palindrome. If it does, then it is appended to a list.
 
